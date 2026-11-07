@@ -1,0 +1,2 @@
+document.getElementById('year').textContent=new Date().getFullYear();
+document.getElementById('search').addEventListener('submit',function(e){e.preventDefault();const zip=document.getElementById('zip').value.trim();if(zip&&!/^\d{5}$/.test(zip)){document.getElementById('search-status').textContent='Enter a valid five-digit ZIP code or leave the ZIP code blank.';document.getElementById('zip').focus();return;}document.getElementById('search-status').textContent='Vehicle search is coming soon. No listings are live yet. We are onboarding licensed dealerships.';});
