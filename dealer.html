@@ -1,7 +1,59 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Apply to join NEWGIGZ Auto Club as a licensed dealership."><title>Dealer Portal | NEWGIGZ Auto Club</title>
 <link rel="stylesheet" href="dealer.css">
 <link rel="stylesheet" href="dealer-photos.css">
-</head><body><a class="skip" href="#main">Skip to main content</a><header><a href="index.html" class="brand"><span class="symbol">N</span> NEWGIGZ <span class="gold">AUTO CLUB</span></a><a href="index.html">← Back to marketplace</a></header><main id="main"><div class="intro"><p class="eyebrow">FOUNDING DEALER PROGRAM</p><h1>Grow your dealership with NEWGIGZ Auto Club.</h1><p>Create a verified email account and apply to join our Georgia dealership pilot. Applications are reviewed before listings can go live.</p></div><section class="panel" aria-label="Dealership account"><div class="tabs" role="group" aria-label="Account actions"><button type="button" id="tab-signup" aria-pressed="true">Create account</button><button type="button" id="tab-login" aria-pressed="false">Sign in</button></div><p id="notice" role="status" aria-live="polite"></p><form id="signup"><label for="signup-email">Business email</label><input id="signup-email" type="email" autocomplete="email" required maxlength="254"><label for="signup-password">Password (at least 12 characters)</label><input id="signup-password" type="password" autocomplete="new-password" required minlength="12"><button class="action" type="submit">Create account</button><p class="help">We'll email you a confirmation link. Confirm your address, then return to this page to sign in and apply.</p></form><form id="login" hidden><label for="login-email">Email</label><input id="login-email" type="email" autocomplete="email" required><label for="login-password">Password</label><input id="login-password" type="password" autocomplete="current-password" required><button class="action" type="submit">Sign in</button></form><div id="authenticated" hidden><p>Signed in as <strong id="user-email"></strong></p><button id="logout" type="button" class="secondary">Sign out</button><form id="application"><h2>Dealership application</h2><label for="legal-name">Legal dealership name</label><input id="legal-name" required maxlength="160"><label for="contact-name">Contact name</label><input id="contact-name" required maxlength="120"><label for="contact-email">Business email</label><input id="contact-email" type="email" required maxlength="254"><label for="phone">Phone</label><input id="phone" type="tel" maxlength="30"><label for="city">Georgia city</label><input id="city" required maxlength="100"><label for="license">Georgia dealer license number</label><input id="license" required maxlength="80"><p class="help">Applications are reviewed manually. Email verification is not dealer-license verification.</p><button class="action" type="submit">Submit application for review</button></form><div id="application-result" hidden></div><section id="inventory" hidden aria-labelledby="inventory-title"><h2 id="inventory-title">Vehicle inventory</h2><p class="help">Only approved dealerships can submit inventory. New vehicles are saved as Draft and are not publicly visible.</p><form id="vehicle-form"><label for="vehicle-vin">VIN (17 characters)</label><input id="vehicle-vin" required minlength="17" maxlength="17" pattern="[A-HJ-NPR-Z0-9]{17}" autocapitalize="characters" placeholder="17-character VIN"><label for="vehicle-year">Year</label><input id="vehicle-year" type="number" min="1900" max="2100" step="1" required><label for="vehicle-make">Make</label><input id="vehicle-make" required maxlength="80"><label for="vehicle-model">Model</label><input id="vehicle-model" required maxlength="80"><label for="vehicle-trim">Trim (optional)</label><input id="vehicle-trim" maxlength="100"><label for="vehicle-mileage">Mileage</label><input id="vehicle-mileage" type="number" min="0" step="1" required><label for="vehicle-price">Asking price (USD)</label><input id="vehicle-price" type="number" min="0" step="0.01" required><label for="vehicle-description">Description (optional)</label><textarea id="vehicle-description" rows="4" maxlength="3000"></textarea><button class="action" id="vehicle-submit" type="submit">Save draft vehicle</button></form><p id="vehicle-notice" role="status" aria-live="polite"></p><h3>Your submitted vehicles</h3><div id="vehicle-list" aria-live="polite"></div></section></div></section><p class="fine">NEWGIGZ Auto Club is an advertising marketplace, not the seller of record. Never enter financial or government identification details into this application.</p></main><footer>© NEWGIGZ Inc. · <a href="mailto:hello@newgigz.com">hello@newgigz.com</a></footer><script type="module" src="dealer.js"></script>
+</head><body><a class="skip" href="#main">Skip to main content</a><header><a href="index.html" class="brand"><span class="symbol">N</span> NEWGIGZ <span class="gold">AUTO CLUB</span></a><a href="index.html">← Back to marketplace</a></header><main id="main"><div class="intro"><p class="eyebrow">FOUNDING DEALER PROGRAM</p><h1>Grow your dealership with NEWGIGZ Auto Club.</h1><p>Create a verified email account and apply to join our nationwide dealership program. Applications are reviewed before listings can go live.</p></div><section class="panel" aria-label="Dealership account"><div class="tabs" role="group" aria-label="Account actions"><button type="button" id="tab-signup" aria-pressed="true">Create account</button><button type="button" id="tab-login" aria-pressed="false">Sign in</button></div><p id="notice" role="status" aria-live="polite"></p><form id="signup"><label for="signup-email">Business email</label><input id="signup-email" type="email" autocomplete="email" required maxlength="254"><label for="signup-password">Password (at least 12 characters)</label><input id="signup-password" type="password" autocomplete="new-password" required minlength="12"><button class="action" type="submit">Create account</button><p class="help">We'll email you a confirmation link. Confirm your address, then return to this page to sign in and apply.</p></form><form id="login" hidden><label for="login-email">Email</label><input id="login-email" type="email" autocomplete="email" required><label for="login-password">Password</label><input id="login-password" type="password" autocomplete="current-password" required><button class="action" type="submit">Sign in</button></form><div id="authenticated" hidden><p>Signed in as <strong id="user-email"></strong></p><button id="logout" type="button" class="secondary">Sign out</button><form id="application"><h2>Dealership application</h2><label for="legal-name">Legal dealership name</label><input id="legal-name" required maxlength="160"><label for="contact-name">Contact name</label><input id="contact-name" required maxlength="120"><label for="contact-email">Business email</label><input id="contact-email" type="email" required maxlength="254"><label for="phone">Phone</label><input id="phone" type="tel" maxlength="30"><label for="city">City</label><input id="city" required maxlength="100"><label for="dealer-state">State of dealer licensure</label><select id="dealer-state" name="state" autocomplete="address-level1" required>
+<option value="">Select your state</option>
+<option value="AL">Alabama</option>
+<option value="AK">Alaska</option>
+<option value="AZ">Arizona</option>
+<option value="AR">Arkansas</option>
+<option value="CA">California</option>
+<option value="CO">Colorado</option>
+<option value="CT">Connecticut</option>
+<option value="DE">Delaware</option>
+<option value="FL">Florida</option>
+<option value="GA">Georgia</option>
+<option value="HI">Hawaii</option>
+<option value="ID">Idaho</option>
+<option value="IL">Illinois</option>
+<option value="IN">Indiana</option>
+<option value="IA">Iowa</option>
+<option value="KS">Kansas</option>
+<option value="KY">Kentucky</option>
+<option value="LA">Louisiana</option>
+<option value="ME">Maine</option>
+<option value="MD">Maryland</option>
+<option value="MA">Massachusetts</option>
+<option value="MI">Michigan</option>
+<option value="MN">Minnesota</option>
+<option value="MS">Mississippi</option>
+<option value="MO">Missouri</option>
+<option value="MT">Montana</option>
+<option value="NE">Nebraska</option>
+<option value="NV">Nevada</option>
+<option value="NH">New Hampshire</option>
+<option value="NJ">New Jersey</option>
+<option value="NM">New Mexico</option>
+<option value="NY">New York</option>
+<option value="NC">North Carolina</option>
+<option value="ND">North Dakota</option>
+<option value="OH">Ohio</option>
+<option value="OK">Oklahoma</option>
+<option value="OR">Oregon</option>
+<option value="PA">Pennsylvania</option>
+<option value="RI">Rhode Island</option>
+<option value="SC">South Carolina</option>
+<option value="SD">South Dakota</option>
+<option value="TN">Tennessee</option>
+<option value="TX">Texas</option>
+<option value="UT">Utah</option>
+<option value="VT">Vermont</option>
+<option value="VA">Virginia</option>
+<option value="WA">Washington</option>
+<option value="WV">West Virginia</option>
+<option value="WI">Wisconsin</option>
+<option value="WY">Wyoming</option>
+</select><label for="license">Dealer license number</label><input id="license" required maxlength="80"><p class="help">Applications are reviewed manually. Dealerships must hold a valid license in their selected state. Email verification is not dealer-license verification. Advertising approval is subject to state-specific verification and launch availability.</p><button class="action" type="submit">Submit application for review</button></form><div id="application-result" hidden></div><section id="inventory" hidden aria-labelledby="inventory-title"><h2 id="inventory-title">Vehicle inventory</h2><p class="help">Only approved dealerships can submit inventory. New vehicles are saved as Draft and are not publicly visible.</p><form id="vehicle-form"><label for="vehicle-vin">VIN (17 characters)</label><input id="vehicle-vin" required minlength="17" maxlength="17" pattern="[A-HJ-NPR-Z0-9]{17}" autocapitalize="characters" placeholder="17-character VIN"><label for="vehicle-year">Year</label><input id="vehicle-year" type="number" min="1900" max="2100" step="1" required><label for="vehicle-make">Make</label><input id="vehicle-make" required maxlength="80"><label for="vehicle-model">Model</label><input id="vehicle-model" required maxlength="80"><label for="vehicle-trim">Trim (optional)</label><input id="vehicle-trim" maxlength="100"><label for="vehicle-mileage">Mileage</label><input id="vehicle-mileage" type="number" min="0" step="1" required><label for="vehicle-price">Asking price (USD)</label><input id="vehicle-price" type="number" min="0" step="0.01" required><label for="vehicle-description">Description (optional)</label><textarea id="vehicle-description" rows="4" maxlength="3000"></textarea><button class="action" id="vehicle-submit" type="submit">Save draft vehicle</button></form><p id="vehicle-notice" role="status" aria-live="polite"></p><h3>Your submitted vehicles</h3><div id="vehicle-list" aria-live="polite"></div></section></div></section><p class="fine">NEWGIGZ Auto Club is an advertising marketplace, not the seller of record. Never enter financial or government identification details into this application.</p></main><footer>© NEWGIGZ Inc. · <a href="mailto:hello@newgigz.com">hello@newgigz.com</a></footer><script type="module" src="dealer.js"></script>
 <script type="module" src="dealer-documents.js"></script>
 </body>
 </html>
